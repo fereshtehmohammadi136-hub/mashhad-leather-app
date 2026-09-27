@@ -1,0 +1,39 @@
+.topBanner {
+  width: 100%;
+  padding: 0;
+  margin-bottom: -1px;
+  overflow: hidden;
+}
+
+.motionHome {
+  width: 100%;
+}
+
+.desktopBanner,
+.mobileBanner {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+}
+
+
+.desktopBanner {
+  display: block;
+}
+
+
+.mobileBanner {
+  display: none;
+}
+
+
+@media (max-width: 767px) {
+  .desktopBanner {
+    display: none;
+  }
+
+  .mobileBanner {
+    display: block;
+  }
+}

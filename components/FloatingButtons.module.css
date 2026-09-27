@@ -1,0 +1,109 @@
+
+
+.baleButton {
+  position: fixed;
+
+  right: 14px;
+  bottom: 100px;
+
+  z-index: 1001;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+
+  background-color: #000;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 1px 3px 0 #0000004d,
+    0 4px 8px 3px #00000026;
+
+  background-position: 61%;
+  background-repeat: no-repeat;
+
+  text-decoration: none;
+}
+
+.baleButton img {
+  width: 38px;
+  height: 38px;
+
+  display: block;
+}
+
+
+
+.chatButton {
+  position: fixed;
+
+  right: 14px;
+  bottom: 35px;
+
+  z-index: 1000;
+
+  width: 58px;
+  height: 58px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #000;
+  color: #fff;
+
+  border: none;
+  border-radius: 16px;
+
+  box-shadow:
+    0 1px 3px 0 #0000004d,
+    0 4px 8px 3px #00000026;
+
+  cursor: pointer;
+}
+
+
+
+
+.messageCount {
+  position: absolute;
+
+  top: -5px;
+  right: -5px;
+
+  min-width: 20px;
+  height: 20px;
+
+  padding: 0 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e60000;
+  color: #fff;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .baleButton {
+    right: 10px;
+  }
+
+  .chatButton {
+    right: 10px;
+  }
+}

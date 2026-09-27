@@ -1,0 +1,35 @@
+.iconLoopSection {
+  background: #000;
+  padding: 35px 0;
+  overflow: hidden;
+  width: 100%;
+  margin: -5px 0 0;
+  display: block;
+}
+
+.iconLoop {
+  padding: 0 3px;
+  white-space: nowrap;
+}
+
+.loopTrack {
+  display: inline-flex;
+  align-items: center;
+  gap: 330px;
+  animation: loopMove 25s linear infinite;
+}
+
+.loopTrack img {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+@keyframes loopMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
