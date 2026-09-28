@@ -1,9 +1,9 @@
 import styles from "./FloatingButtons.module.css";
+import { assetPath } from "@/lib/assetPath";
 
 export default function FloatingButtons() {
   return (
     <>
-      
       <a
         className={styles.baleButton}
         href="https://web.bale.ai/@mlcrm"
@@ -12,14 +12,13 @@ export default function FloatingButtons() {
         aria-label="اپلیکیشن بله"
       >
         <img
-          src="/images/bale.png"
+          src={assetPath("/images/bale.png")}
           alt="اپلیکیشن بله"
           width="38"
           height="38"
         />
       </a>
 
-      
       <button
         type="button"
         className={styles.chatButton}

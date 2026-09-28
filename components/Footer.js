@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+import { assetPath } from "@/lib/assetPath";
 
 export default function Footer() {
   return (
@@ -80,7 +81,10 @@ export default function Footer() {
           </div>
 
           <div className={styles.logoBox}>
-            <img src="/images/footerLogo.png" alt="Mashad Leather" />
+            <img
+              src={assetPath("/images/footerLogo.png")}
+              alt="Mashad Leather"
+            />
           </div>
         </div>
 
@@ -105,7 +109,6 @@ export default function Footer() {
 
             <p>
               <strong>شنبه تا چهارشنبه به جز تعطیلات رسمی:</strong>
-
               <span>08:00 - 17:00</span>
             </p>
 
@@ -256,7 +259,7 @@ export default function Footer() {
                 aria-label="Aparat"
                 className={styles.aparatIcon}
               >
-                <img src="/images/aparat.png" alt="Aparat" />
+                <img src={assetPath("/images/aparat.png")} alt="Aparat" />
               </a>
             </li>
           </ul>
@@ -277,15 +280,20 @@ export default function Footer() {
 
         <div className={styles.symbols}>
           <img
-            src="/images/enamadasli.png"
+            src={assetPath("/images/enamadasli.png")}
             alt="نماد اعتماد الکترونیکی"
             className={styles.enamad}
           />
 
-          <img src="/images/Asset 45@3x-8.png" alt="مجوز" />
+          <img src={assetPath("/images/Asset 45@3x-8.png")} alt="مجوز" />
         </div>
 
-        <div className={styles.footerBgLine}></div>
+        <div
+          className={styles.footerBgLine}
+          style={{
+            backgroundImage: `url("${assetPath("/images/logo.png")}")`,
+          }}
+        ></div>
       </footer>
     </>
   );

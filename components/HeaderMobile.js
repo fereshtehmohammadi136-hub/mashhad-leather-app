@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./HeaderMobile.module.css";
+import { assetPath } from "@/lib/assetPath";
 
 export default function HeaderMobile() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,15 +10,13 @@ export default function HeaderMobile() {
   return (
     <>
       <header className={styles.headerMobile}>
-        
-        <a href="/" className={styles.logo}>
+        <a href={assetPath("/")} className={styles.logo}>
           <img
-            src="/images/logo.png"
+            src={assetPath("/images/logo.png")}
             alt="Mashad Leather"
           />
         </a>
 
-        
         <div className={styles.actions}>
           {/* Search */}
           <button className={styles.iconButton} aria-label="جستجو">
@@ -38,7 +37,6 @@ export default function HeaderMobile() {
             </svg>
           </button>
 
-          
           <button className={styles.iconButton} aria-label="حساب کاربری">
             <svg viewBox="0 0 24 24" fill="none">
               <circle
@@ -56,7 +54,6 @@ export default function HeaderMobile() {
             </svg>
           </button>
 
-         
           <button className={styles.cartButton} aria-label="سبد خرید">
             <svg viewBox="0 0 24 24" fill="none">
               <path
@@ -74,7 +71,6 @@ export default function HeaderMobile() {
             <span className={styles.cartCount}>0</span>
           </button>
 
-         
           <button
             className={styles.iconButton}
             aria-label="منو"
@@ -92,7 +88,6 @@ export default function HeaderMobile() {
         </div>
       </header>
 
-      
       <div
         className={`${styles.overlay} ${
           menuOpen ? styles.overlayOpen : ""

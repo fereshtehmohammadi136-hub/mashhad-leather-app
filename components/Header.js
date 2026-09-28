@@ -1,15 +1,12 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
+import { assetPath } from "@/lib/assetPath";
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerInner}>
-
-        
         <nav className={styles.navbar}>
-
-          
           <div className={styles.menuItem}>
             <Link href="#">کالکشن جدید</Link>
 
@@ -19,13 +16,11 @@ export default function Header() {
             </div>
           </div>
 
-          
           <div className={styles.menuItem}>
             <Link href="#">زنانه</Link>
 
             <div className={styles.megaMenu}>
               <div className={styles.megaMenuInner}>
-
                 <div className={styles.menuColumn}>
                   <h3>کیف زنانه</h3>
                   <Link href="#">کیف دوشی</Link>
@@ -58,18 +53,15 @@ export default function Header() {
                   <Link href="#">جاکارتی</Link>
                   <Link href="#">دستکش</Link>
                 </div>
-
               </div>
             </div>
           </div>
 
-          
           <div className={styles.menuItem}>
             <Link href="#">مردانه</Link>
 
             <div className={styles.megaMenu}>
               <div className={styles.megaMenuInner}>
-
                 <div className={styles.menuColumn}>
                   <h3>کیف مردانه</h3>
                   <Link href="#">کیف دوشی</Link>
@@ -100,12 +92,10 @@ export default function Header() {
                   <Link href="#">جاکارتی</Link>
                   <Link href="#">دستکش</Link>
                 </div>
-
               </div>
             </div>
           </div>
 
-         
           <div className={styles.menuItem}>
             <Link href="#">اکسسوری خانه</Link>
 
@@ -115,7 +105,6 @@ export default function Header() {
             </div>
           </div>
 
-          
           <div className={styles.menuItem}>
             <Link href="#">سایر محصولات</Link>
 
@@ -129,113 +118,105 @@ export default function Header() {
           <Link href="#">باشگاه مشتریان</Link>
         </nav>
 
-        
-        <Link href="/" className={styles.logo}>
+        <Link href={assetPath("/")} className={styles.logo}>
           <img
-            src="/images/logo.png"
+            src={assetPath("/images/logo.png")}
             alt="Mashad Leather"
             className={styles.logoImage}
           />
         </Link>
 
+        <div className={styles.actions}>
+          <div className={styles.actionMenu}>
+            <button
+              type="button"
+              className={styles.iconButton}
+              aria-label="حساب کاربری"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="25"
+                height="25"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+              >
+                <circle cx="12" cy="7" r="3.5" />
+                <path d="M5 21v-3a7 7 0 0 1 14 0v3H5Z" />
+              </svg>
+            </button>
 
-<div className={styles.actions}>
+            <div className={styles.actionDropdown}>
+              <Link href="#">حساب کاربری</Link>
+              <Link href="#">پیگیری سفارش</Link>
+            </div>
+          </div>
 
-  
-  <div className={styles.actionMenu}>
-    <button
-      type="button"
-      className={styles.iconButton}
-      aria-label="حساب کاربری"
-    >
-      <svg
-        viewBox="0 0 24 24"
-        width="25"
-        height="25"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      >
-        <circle cx="12" cy="7" r="3.5" />
-        <path d="M5 21v-3a7 7 0 0 1 14 0v3H5Z" />
-      </svg>
-    </button>
+          <button
+            type="button"
+            className={styles.iconButton}
+            aria-label="سبد خرید"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="25"
+              height="25"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+            >
+              <path d="M5 8h14l-1 12H6L5 8Z" />
+              <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+            </svg>
+          </button>
 
-    <div className={styles.actionDropdown}>
-      <Link href="#">حساب کاربری</Link>
-      <Link href="#">پیگیری سفارش</Link>
-    </div>
-  </div>
+          <span className={styles.divider}></span>
 
-  
-  <button
-    type="button"
-    className={styles.iconButton}
-    aria-label="سبد خرید"
-  >
-    <svg
-      viewBox="0 0 24 24"
-      width="25"
-      height="25"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-    >
-      <path d="M5 8h14l-1 12H6L5 8Z" />
-      <path d="M9 8V6a3 3 0 0 1 6 0v2" />
-    </svg>
-  </button>
+          <div className={styles.actionMenu}>
+            <button
+              type="button"
+              className={styles.iconButton}
+              aria-label="زبان"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="25"
+                height="25"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18" />
+                <path d="M12 3c3 3 3 15 0 18" />
+                <path d="M12 3c-3 3-3 15 0 18" />
+              </svg>
+            </button>
 
-  
-  <span className={styles.divider}></span>
+            <div className={styles.actionDropdown}>
+              <Link href="#">EN</Link>
+              <Link href="#">FA</Link>
+              <Link href="#">AR</Link>
+            </div>
+          </div>
 
-  
-  <div className={styles.actionMenu}>
-    <button
-      type="button"
-      className={styles.iconButton}
-      aria-label="زبان"
-    >
-      <svg
-        viewBox="0 0 24 24"
-        width="25"
-        height="25"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <circle cx="12" cy="12" r="9" />
-        <path d="M3 12h18" />
-        <path d="M12 3c3 3 3 15 0 18" />
-        <path d="M12 3c-3 3-3 15 0 18" />
-      </svg>
-    </button>
-
-    <div className={styles.actionDropdown}>
-      <Link href="#">EN</Link>
-      <Link href="#">FA</Link>
-      <Link href="#">AR</Link>
-    </div>
-  </div>
-
-  
-  <button
-    type="button"
-    className={styles.iconButton}
-    aria-label="جستجو"
-  >
-    <svg
-      viewBox="0 0 24 24"
-      width="25"
-      height="25"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-    >
-      <circle cx="11" cy="11" r="7" />
-      <path d="M16.5 16.5L21 21" />
-    </svg>
-  </button>
+          <button
+            type="button"
+            className={styles.iconButton}
+            aria-label="جستجو"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="25"
+              height="25"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="M16.5 16.5L21 21" />
+            </svg>
+          </button>
         </div>
       </div>
     </header>

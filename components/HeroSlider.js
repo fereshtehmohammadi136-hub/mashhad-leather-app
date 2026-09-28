@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Hero.module.css";
+import { assetPath } from "@/lib/assetPath";
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -33,7 +34,6 @@ export default function HeroSlider() {
     setCurrentSlide(2);
   };
 
-  
   const handleTransitionEnd = () => {
     if (currentSlide === 2) {
       setTransitionEnabled(false);
@@ -59,10 +59,9 @@ export default function HeroSlider() {
             : "none",
         }}
       >
-        
         <div className={styles.heroSlide}>
           <Image
-            src="/images/hero.webp"
+            src={assetPath("/images/hero.webp")}
             alt="چرم مشهد"
             fill
             priority
@@ -76,7 +75,6 @@ export default function HeroSlider() {
           </div>
         </div>
 
-        
         <div className={styles.heroSlide}>
           <video
             ref={videoRef}
@@ -85,7 +83,10 @@ export default function HeroSlider() {
             playsInline
             onEnded={handleVideoEnd}
           >
-            <source src="/images/film.webm" type="video/webm" />
+            <source
+              src={assetPath("/images/film.webm")}
+              type="video/webm"
+            />
           </video>
 
           <div className={styles.videoText}>
@@ -94,10 +95,9 @@ export default function HeroSlider() {
           </div>
         </div>
 
-        
         <div className={styles.heroSlide}>
           <Image
-            src="/images/hero.webp"
+            src={assetPath("/images/hero.webp")}
             alt="چرم مشهد"
             fill
             sizes="100vw"
